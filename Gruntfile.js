@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     'gh-pages': {
       'options': {
-        'base': 'build'
+        'base': './'
       },
       'deploy': {
         'src': ['index.html','cpr.js', 'cpr.min.js']
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       },
       'src': {
         'files': {
-          'src': ['*.js']
+          'src': ['*.js', '!*.min.js']
         }
       }
     }
