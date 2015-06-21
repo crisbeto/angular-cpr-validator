@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en" ng-app="demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular CPR validator demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        .container{
+            width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .back{
+            position: fixed;
+            top:5px;
+            right:5px;
+        }
+
+        input{
+            display: block;
+            outline: 0;
+            width: 100%;
+            border: solid 1px #ccc;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        input:focus{
+            border-color: #333;
+        }
+
+        input.ng-invalid.ng-dirty{
+            border-color:#f00;
+        }
+
+        .form-error{
+            text-align: left;
+            margin-top: 10px;
+            color:#f00;
+        }
+
+        form{
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back" href="https://github.com/crisbeto/angular-cpr-validator">Back to project repo</a>
+
+        <form ng-submit="" novalidate name="form1">
+            <h1>Validate a CPR number</h1>
+            <input
+                type="text"
+                name="cpr"
+                ng-model="cpr"
+                placeholder="Input a CPR number"
+                validate-cpr>
+
+            <div class="form-error" ng-show="form1.cpr.$dirty && form1.cpr.$invalid">This is not a valid CPR number</div>
+        </form>
+
+        <form ng-submit="" novalidate name="form2">
+            <h1>Validate a CPR number (without modulus check)</h1>
+            <input
+                type="text"
+                name="cpr"
+                ng-model="cpr2"
+                placeholder="Input a CPR number"
+                validate-cpr
+                check-modulus="false">
+
+            <div class="form-error" ng-show="form2.cpr.$dirty && form2.cpr.$invalid">This is not a valid CPR number</div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="cpr.min.js"></script>
+    <script>
+        angular.module('demo', ['angular-cpr-validator']);
+    </script>
+</body>
+</html>
