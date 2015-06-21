@@ -1,6 +1,6 @@
 {
   "name": "angular-cpr-validator",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Checks whether an input contains a valid Danish CPR number",
   "main": "cpr.min.js",
   "scripts": {},
