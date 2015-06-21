@@ -19,7 +19,7 @@ or
 Add `angular-cpr-validator` to your app's module dependencies:
 
 ```javascript
-angular.module('sometModule', ['angular-cpr-validator'])
+angular.module('someModule', ['angular-cpr-validator'])
 ```
 
 ## Modulus check
