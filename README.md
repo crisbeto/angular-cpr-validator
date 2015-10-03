@@ -7,7 +7,11 @@ Checks that the birthday is valid, as well as the check digit (can be disabled).
 
 ## Install
 
-Include Angular and [cpr.min.js](https://raw.githubusercontent.com/crisbeto/angular-cpr-validator/master/cpr.min.js) or [cpr.js](https://raw.githubusercontent.com/crisbeto/angular-cpr-validator/master/cpr.js) in your page. You can use bower, or a script-tag:
+Include Angular and [cpr.min.js](https://raw.githubusercontent.com/crisbeto/angular-cpr-validator/master/cpr.min.js) or [cpr.js](https://raw.githubusercontent.com/crisbeto/angular-cpr-validator/master/cpr.js) in your page. You can use npm, bower, or a script-tag:
+
+`npm install angular-cpr-validator`
+
+or
 
 `bower install angular-cpr-validator`
 
